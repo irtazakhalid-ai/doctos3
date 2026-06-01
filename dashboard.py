@@ -616,10 +616,19 @@ poll();
 </html>
 """
 
+# ---------- Health check -----------------------------------------------------
+
+@app.route("/health")
+def health():
+    return jsonify({"ok": True, "phase": state["phase"]}), 200
+
 # ---------- Entry point ------------------------------------------------------
+# Worker starts at module level so gunicorn (which never hits __main__) also
+# gets the background thread.
+
+_worker_thread = threading.Thread(target=worker, name="upload-worker", daemon=True)
+_worker_thread.start()
 
 if __name__ == "__main__":
-    t = threading.Thread(target=worker, name="upload-worker", daemon=True)
-    t.start()
-    log.info("Dashboard -> http://0.0.0.0:%d", PORT)
+    log.info("Dashboard (dev) -> http://0.0.0.0:%d", PORT)
     app.run(host="0.0.0.0", port=PORT, threaded=True)
