@@ -36,6 +36,7 @@ GDRIVE_S3_PREFIX = os.getenv("GDRIVE_S3_PREFIX", "judgments-markdown/")
 S3_BUCKET        = os.getenv("S3_BUCKET_NAME", "assancase-documents-adminpenta")
 AWS_REGION       = os.getenv("AWS_REGION") or os.getenv("AWS_DEFAULT_REGION", "us-east-1")
 MANIFEST_KEY     = "sync-manifest.json"   # unified manifest covering both sources
+POLL_INTERVAL    = int(os.getenv("POLL_INTERVAL_SECONDS", "1"))
 # Force port 8080 as Railway domain is explicitly mapped to 8080
 PORT             = 8080
 WORK_DIR         = Path(os.getenv("WORK_DIR", tempfile.gettempdir())) / "kaggle_s3"
