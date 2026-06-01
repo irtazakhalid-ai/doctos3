@@ -3,6 +3,6 @@ builder = "DOCKERFILE"
 dockerfilePath = "Dockerfile"
 
 [deploy]
-startCommand = "python -u kaggle_to_s3.py"
+startCommand = "python -u dashboard.py"
 restartPolicyType = "ON_FAILURE"
 restartPolicyMaxRetries = 3

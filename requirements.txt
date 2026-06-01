@@ -2,3 +2,4 @@ kaggle>=1.6.17
 boto3>=1.34.0
 python-dotenv>=1.0.0
 tqdm>=4.66.0
+flask>=3.0.0
