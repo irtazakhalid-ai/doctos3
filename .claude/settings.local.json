@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell(pip install *)",
+      "PowerShell(python -c \"import kaggle; print\\(dir\\(kaggle\\)\\)\")",
+      "PowerShell(python -c \"import kaggle.api.kaggle_api_extended as m; print\\(dir\\(m\\)\\)\")",
+      "PowerShell(python -c \"import kaggle; print\\(kaggle.__version__\\)\")",
+      "PowerShell($f = \"C:\\\\Users\\\\MIRAAN~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\D--doctoS3\\\\ccd1b40b-c634-4111-a5c6-818cf67d1e2b\\\\tasks\\\\biuntr5r5.output\"; $lines = Get-Content $f; $total = $lines.Count; $lines | Select-Object -Last 5; Write-Host \"--- Total lines so far: $total ---\")",
+      "PowerShell($f = \"C:\\\\Users\\\\MIRAAN~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\D--doctoS3\\\\ccd1b40b-c634-4111-a5c6-818cf67d1e2b\\\\tasks\\\\biuntr5r5.output\"; $lines = Get-Content $f; $total = $lines.Count; $uploaded = \\($lines | Select-String \"\\\\[INFO\\\\] Uploading\"\\).Count; $lines | Select-Object -Last 3; Write-Host \"--- Lines: $total | Files uploaded so far: $uploaded / 1189 ---\")",
+      "PowerShell($f = \"C:\\\\Users\\\\MIRAAN~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\D--doctoS3\\\\ccd1b40b-c634-4111-a5c6-818cf67d1e2b\\\\tasks\\\\biuntr5r5.output\"; $lines = Get-Content $f; $uploaded = \\($lines | Select-String \"\\\\[INFO\\\\] Uploading\"\\).Count; $lines | Select-Object -Last 2; Write-Host \"--- Files uploaded so far: $uploaded / 1189 ---\")",
+      "PowerShell($f = \"C:\\\\Users\\\\MIRAAN~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\D--doctoS3\\\\ccd1b40b-c634-4111-a5c6-818cf67d1e2b\\\\tasks\\\\biuntr5r5.output\"; $lines = Get-Content $f; $uploaded = \\($lines | Select-String \"\\\\[INFO\\\\] Uploading\"\\).Count; $lines | Select-Object -Last 2; Write-Host \"Files uploaded: $uploaded / 1189\")",
+      "PowerShell($f = \"C:\\\\Users\\\\MIRAAN~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\D--doctoS3\\\\ccd1b40b-c634-4111-a5c6-818cf67d1e2b\\\\tasks\\\\biuntr5r5.output\"; $lines = Get-Content $f; $uploaded = \\($lines | Select-String \"\\\\[INFO\\\\] Uploading\"\\).Count; $summary = $lines | Select-String \"Upload summary|Done in|error\"; $lines | Select-Object -Last 4; Write-Host \"Files uploaded: $uploaded / 1189\"; $summary)",
+      "PowerShell($f = \"C:\\\\Users\\\\MIRAAN~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\D--doctoS3\\\\ccd1b40b-c634-4111-a5c6-818cf67d1e2b\\\\tasks\\\\biuntr5r5.output\"; $lines = Get-Content $f; $uploaded = \\($lines | Select-String \"\\\\[INFO\\\\] Uploading\"\\).Count; $done = $lines | Select-String \"Upload summary|Done in\"; $lines | Select-Object -Last 3; Write-Host \"Files uploaded: $uploaded / 1189\"; if \\($done\\) { $done })",
+      "PowerShell($f = \"C:\\\\Users\\\\MIRAAN~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\D--doctoS3\\\\ccd1b40b-c634-4111-a5c6-818cf67d1e2b\\\\tasks\\\\biuntr5r5.output\"; $lines = Get-Content $f; $uploaded = \\($lines | Select-String \"\\\\[INFO\\\\] Uploading\"\\).Count; $done = $lines | Select-String \"Upload summary|Done in\"; $lines | Select-Object -Last 4; Write-Host \"Files uploaded: $uploaded / 1189\"; if \\($done\\) { Write-Host \"=== COMPLETE ===\"; $done })"
+    ]
+  }
+}
